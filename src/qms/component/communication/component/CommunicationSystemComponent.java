@@ -1,4 +1,6 @@
 package qms.component.communication.component;
 
-public interface CommunicationSystemComponent {
+import utility.Priceable;
+
+public interface CommunicationSystemComponent extends Priceable {
 }
