@@ -1,5 +1,6 @@
 package qms.component.communication;
 
+import config.Constants;
 import qms.component.QMSComponent;
 import qms.component.communication.component.CommunicationSystemComponent;
 
@@ -15,5 +16,12 @@ public class CommunicationSystem implements QMSComponent {
 
     public void add(CommunicationSystemComponent part){
         parts.add(part);
+    }
+    @Override
+    public double getPrice() {
+        double totalPrice=0;
+        for(CommunicationSystemComponent communicationSystemComponent:parts)
+            totalPrice+=communicationSystemComponent.getPrice();
+        return totalPrice;
     }
 }

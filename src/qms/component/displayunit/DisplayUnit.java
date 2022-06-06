@@ -18,4 +18,13 @@ public class DisplayUnit implements QMSComponent {
     public void add(DisplayUnitComponent part){
         parts.add(part);
     }
+
+    @Override
+    public double getPrice() {
+        double totalPrice=0;
+        for(DisplayUnitComponent displayUnitComponent:parts)
+            totalPrice+=displayUnitComponent.getPrice();
+        return quantity*totalPrice;
+    }
+
 }

@@ -6,9 +6,9 @@ public class ChannelFactory {
     public Channel getChannel(String channelType){
         if(channelType==null)
             return null;
-        else if (channelType.trim().equalsIgnoreCase(Constants.CHANNEL_TYPE_WIFI_MODULE.trim()))
+        else if (channelType.trim().equalsIgnoreCase(Constants.CONNECTIVITY_TYPE_BROADBAND.trim()))
             return new WifiModule();
-        else if (channelType.trim().equalsIgnoreCase(Constants.CHANNEL_TYPE_SIM_CARD.trim()))
+        else if (channelType.trim().equalsIgnoreCase(Constants.CONNECTIVITY_TYPE_MOBILE_DATA.trim()))
             return new SIMCard();
         else return null;
     }

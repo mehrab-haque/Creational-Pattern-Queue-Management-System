@@ -18,6 +18,7 @@ public class QMSConcreteBuilder implements QMSBuilder{
         DisplayUnitDirector displayUnitDirector=new DisplayUnitDirector();
         DisplayUnitBuilder displayUnitBuilder=new DisplayUnitConcreteBuilder(processorType, displaySystemType, quantity);
         displayUnitDirector.constructDisplayUnit(displayUnitBuilder);
+        qms.add(displayUnitBuilder.getDisplayUnit());
     }
 
     @Override
@@ -25,6 +26,7 @@ public class QMSConcreteBuilder implements QMSBuilder{
         CommunicationSystemDirector communicationSystemDirector=new CommunicationSystemDirector();
         CommunicationSystemBuilder communicationSystemBuilder=new CommunicationSystemConcreteBuilder(communicationType);
         communicationSystemDirector.constructCommunicationSystem(communicationSystemBuilder);
+        qms.add(communicationSystemBuilder.getCommunicationDSystem());
     }
 
     @Override
@@ -41,6 +43,6 @@ public class QMSConcreteBuilder implements QMSBuilder{
 
     @Override
     public QMS getQMS() {
-        return null;
+        return qms;
     }
 }
