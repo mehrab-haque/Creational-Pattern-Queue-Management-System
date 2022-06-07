@@ -7,4 +7,9 @@ public class Broadband implements Connectivity{
     public double getPrice() {
         return Constants.PRICE_BROADBAND;
     }
+
+    @Override
+    public String toString() {
+        return "Connectivity : Broadband, cost : "+getPrice();
+    }
 }

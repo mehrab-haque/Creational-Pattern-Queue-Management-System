@@ -27,6 +27,10 @@ public class QMS implements Priceable {
 
     @Override
     public String toString() {
-        return parts.size()+"";
+        String spec="\n";
+        for(QMSComponent part:parts)
+            spec+=part.toString()+'\n';
+        spec+="Total cost : "+this.getPrice();
+        return spec+"\n";
     }
 }

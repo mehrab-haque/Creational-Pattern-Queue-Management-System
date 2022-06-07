@@ -27,4 +27,12 @@ public class DisplayUnit implements QMSComponent {
         return quantity*totalPrice;
     }
 
+    @Override
+    public String toString() {
+        String spec="Number of Display Units : "+quantity+"\n";
+        for(DisplayUnitComponent part:parts)
+            spec+=part.toString()+'\n';
+        spec+="Total cost of display unit : "+this.getPrice();
+        return spec;
+    }
 }

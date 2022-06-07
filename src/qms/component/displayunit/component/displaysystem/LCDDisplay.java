@@ -7,4 +7,9 @@ public class LCDDisplay implements DisplaySystem{
     public double getPrice() {
         return Constants.PRICE_LCD_DISPLAY;
     }
+
+    @Override
+    public String toString() {
+        return "Display : "+Constants.DISPLAY_SYSTEM_TYPE_LCD_DISPLAY+", cost per piece : "+getPrice();
+    }
 }

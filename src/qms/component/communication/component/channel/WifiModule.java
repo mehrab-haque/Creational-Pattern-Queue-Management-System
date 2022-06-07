@@ -7,4 +7,9 @@ public class WifiModule implements Channel{
     public double getPrice() {
         return Constants.PRICE_WIFI_MODULE;
     }
+
+    @Override
+    public String toString() {
+        return "Channel : Wifi Module, cost : "+getPrice();
+    }
 }

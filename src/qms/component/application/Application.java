@@ -8,4 +8,9 @@ public class Application implements QMSComponent {
     public double getPrice() {
         return Constants.PRICE_APPLICATION;
     }
+
+    @Override
+    public String toString() {
+        return "Yealy cost of the application for communication : "+Constants.PRICE_APPLICATION;
+    }
 }
